@@ -18,5 +18,7 @@ public class DragAndDropSelenideTest {
         $("#column-a").dragAndDropTo($("#column-b"));
         // Проверяем что элемент переместился и теперь на первом месте значение B
         $$("#columns > div").first().shouldHave(text("B"));
+        // Проверяем что элемент переместился и теперь на втором месте значение A
+        $$("#columns > div").get(1).shouldHave(text("A"));
     }
 }
